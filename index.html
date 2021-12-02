@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: sans-serif ;
+            }
+
+            header{
+                position: sticky;
+                color: greenyellow;
+                background-color: green;
+                top: 0px;
+                display: flex;
+                z-index: 1;
+            }
+
+            .navigasi{
+                position: relative;
+                margin: auto;
+            }
+            
+             ul{
+                 list-style-type: none;
+                 margin:0px;
+                 padding: 0px 0px 15px 0px;
+                 text-align: center;
+             }
+
+             li{
+                 display: inline;
+                 padding: 0px 5px 0px 5px;
+             }
+
+             section{
+                 margin: auto;
+                 display: flex;
+                 margin-bottom: 50px;
+                 width: 1100px;
+             }
+             section img{
+                 width: 600px;
+                 height: 600px;
+             }
+
+             .kolom {
+                 margin-top: 50px;
+                 margin-bottom: 50px;
+             }
+
+             .tengah{
+                text-align: center;
+                width: 100%;
+                background: green;
+                color: lawngreen;
+                padding-left: 70px;
+                padding-right: 70px;
+             }
+
+             #website{
+                 width: 100%;
+             }
+
+             h2{
+                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                 font-size: 40px;
+                 margin-bottom: 20px;
+                 width: 100%;
+             }
+
+             .bahasa-list{
+                 width: 100%;
+                 position: relative;
+                 display: flex;
+                 flex-wrap: wrap;
+             }
+
+             .detail-bahasa{
+                 width: 20%;
+                 margin: 0 auto;
+             }
+
+             .detail-bahasa img{
+                 width: 100px;
+                 height: 100px;
+                 border-radius: 10%;
+                 border:20px solid olivedrab;
+             }
+
+             button{
+                 background-color: forestgreen;
+                 border: 20px solid rgb(0, 253, 0);
+                 color: limegreen;
+                 padding: 15px 32px;
+                 text-align: center;
+                 font-size: 16px;
+                 border-radius: 11px;
+             }
+
+             h1{
+                 margin-top: 0;
+                 margin-bottom: 20px;
+             }
+
+             .navigasi p{
+                 text-align: center;
+                 margin-top: 10px;
+                 margin-bottom: 0;
+                 font-size: 15px;
+             }
+
+             p{
+                 font-size: 25px;
+             }
+
+             a{
+                 color: red;
+                 text-decoration: greenyellow;
+             }
+
+             a:hover{
+                 text-decoration: underline;
+             }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="navigasi">
+                <p id="date">Date</p>
+                <h1>Summer Coding Camp</h1>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                </ul>
+            </div>    
+        </header>
+
+        <section>
+            <div class="kolom">
+                <h2>What is Coding?</h2>
+                <p>Coding itu Bahasa Yang dipakai untuk memprogram Komputer Coding itu bisa digunakan untuk Membuat aplikasi/Website,game,dan animasi.</p>
+            </div>
+            <img src="coding.jpg">
+        </section>
+
+        <section id="website">
+             <div class="tengah">
+                 <div class="kolom">
+                     <h2>Website</h2>
+                     <p>Website adalah kumpulan halaman Web yang dapat diakses melalui sebuah alamat menggunakan browser.</p>
+                 </div>
+
+                 <div class="bahasa-list">
+                     <div class="detail-bahasa">
+                         <img src="html.jpg">
+                        <p>HTML adalah bahasa yang akan kita gunakan untuk membuat kerangka dari website.</p>
+                     </div>
+
+                     <div class="detail-bahasa">
+                         <img src="css.jpg">
+                        <p>CSS adalah bahasa yang kita gunakan untuk mempercantik website yang kita buat. </p>
+                     </div>
+
+                     <div class="detail-bahasa">
+                         <img src="javascript.jpg">
+                        <p>JavaScript adalah bahasa yang digunakan untuk membuat website menjadi lebih responsive.</p>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <section>
+            <img src="coding3.jpg">
+            <div class="kolom">
+            <h2>What is Construct 3?</h2>
+            <p>Construct 3 itu aplikasi yang membantu kamu untuk membikin game seperti game puzzle,shooting,maze,dll.</p>
+            <button>
+                <a href="https://survivalgalaxygovan.netlify.app" target="blank">
+                Click here to play my game!
+                </a>
+            </button>
+            </div>
+        </section>
+    </body>
+    <script>
+    var date = new Date();
+     var hari = date.getDay();
+     var tanggal = date.getDate();
+     var bulan = date.getMonth();
+     var year = date.getFullYear();
+
+    var list_hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']
+    var list_bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'Desember'];
+
+    var hari_sekarang = list_hari[hari];
+    var bulan_sekarang = list_bulan[bulan];
+
+    document.getElementById('date').innerHTML = hari_sekarang + ", " + tanggal + " " + bulan_sekarang + " " + year;
+    </script>
+</html>
